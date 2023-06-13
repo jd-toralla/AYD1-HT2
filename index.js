@@ -36,14 +36,14 @@ const esPrimo = (numero) => {
   return true;
 } 
 //Suma
-app.post('/suma', (req, res) => {
+app.post('/multiplicacion', (req, res) => {
   
   const {num1, num2} = req.query;
   console.log(req.query)
   if(num1 != undefined && num2 !=undefined){
     if(areNumbers(num1, num2)){
-      const result = parseFloat(num1) + parseFloat(num2);
-      res.send(`La suma es: ${result}`);
+      const result = parseFloat(num1) * parseFloat(num2);
+      res.send(`La multiplicacion es: ${result}`);
     }else{
       res.send(`Error: Los valores ingresados no son números`);
     }
